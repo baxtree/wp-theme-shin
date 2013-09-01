@@ -27,7 +27,7 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/img/favicon.ico" />
 <?php wp_head(); ?>
-<script language="JavaScript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
+<script language="JavaScript" type="text/javascript" src="<?php bloginfo("template_directory"); ?>/js/jquery-1.2.6.js"></script>
 <script language="JavaScript" type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/nav-dropdown.js"></script>
 <script language="JavaScript" type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/thumbnail-fade.js"></script>
 </head>
@@ -67,8 +67,8 @@
             <li><a href="#">Our Story</a>
                 <ul>
 <!--                     <?php wp_list_categories('orderby=name&title_li=&depth=-1'); ?> -->
-					<li><a href="#">About Shingerie</a></li>
-					<li><a href="#">Customer Services</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/about/">About Shingerie</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/customer-services/">Customer Services</a></li>
                 </ul>
             </li>
             <li><a href="#">Our Products</a>
@@ -78,7 +78,7 @@
             		<li><a href="#">Sales</a></li>
             	</ul>
             </li>
-            <li><a href="<?php bloginfo('url'); ?>/findus" title="Read more about <?php bloginfo('name'); ?>">Find Us</a></li>
+            <li><a href="<?php bloginfo('url'); ?>/find-us/" title="Read more about <?php bloginfo('name'); ?>">Find Us</a></li>
 <!--
             <li><a href="#">Subscribe</a>
                 <ul>

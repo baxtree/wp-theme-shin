@@ -7,7 +7,10 @@
 			<h1><?php the_title(); ?></h1>
             <div class="post-featured-image"><?php the_post_thumbnail('featured-image');  ?></div>
             <div class="post-single-details">
-                <div class="date"><?php the_time('F jS, Y') ?></div> | <div class="cat" ><?php the_category(',  ') ?> <?php comments_number(' ', '| <a href="#comments">1 Comment</a>', '| <a href="#comments">% Comments</a>' );?></div><!-- /.cat -->
+                <!-- <div class="date"><?php the_time('F jS, Y') ?></div> |  -->
+                <div class="cat" >
+                	<?php the_category(',  ') ?> <?php comments_number(' ', '| <a href="#comments">1 Comment</a>', '| <a href="#comments">% Comments</a>' );?>
+                </div><!-- /.cat -->
                 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal"
                 <?php if (get_option('mmminimal_twitter') != '') { ?>data-via="<?php echo get_option('mmminimal_twitter'); ?>"<?php } ?>
                 >Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
@@ -16,7 +19,8 @@
 
 			<div class="entry">
 	            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
+				<?php //the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
+				<?php the_content(); ?>
                 <div class="tags"><?php the_tags('Tags: ', ', ', ' '); ?></div>
             </div><!-- /.entry -->
 
@@ -54,12 +58,13 @@
 
             <?php 
 				//include('comments.php');
-			comments_template(); ?>
+				//comments_template(); 
+			?>
 
 
         <?php endwhile; else: ?>
 
-        		<p>Sorry, no posts matched your criteria.</p>
+        		<p>Sorry, no products matched your criteria.</p>
 
         <?php endif; ?>
 

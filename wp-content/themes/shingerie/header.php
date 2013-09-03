@@ -73,7 +73,7 @@
             </li>
             <li><a href="#">Our Products</a>
             	<ul>
-            		<li><a href="#">Brand</a></li>
+            		<li><a href="<?php bloginfo("url"); ?>/category/brands/">Brand</a></li> 
             		<li><a href="#">Category</a></li>
             		<li><a href="#">Sales</a></li>
             	</ul>
